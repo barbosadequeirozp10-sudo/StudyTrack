@@ -1,0 +1,20 @@
+name: Testes do StudyTrack
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  unittest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar código
+        uses: actions/checkout@v4
+      - name: Preparar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Testes automatizados
+        run: python -m unittest discover -s tests -v
+      - name: Verificar sintaxe dos programas
+        run: python -m compileall -q app.py main.py database.py

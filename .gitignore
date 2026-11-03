@@ -1,0 +1,22 @@
+# Dados locais e possíveis informações pessoais
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+exports/
+backups/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+.env
+.env.*
+
+# Sistema operacional / IDE
+.DS_Store
+Thumbs.db
+.vscode/
